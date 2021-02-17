@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "engines": {
-    "node": "12.x"
+    "node": "12.x",
+    "npm": "6.x"
   },
   "scripts": {
     "start": "node ./bin/www"
@@ -18,6 +19,7 @@
     "newrelic": "^7.1.1",
     "nodemon": "^2.0.7",
     "pug": "2.0.0-beta11",
-    "react-scripts": "4.0.1"
+    "react-scripts": "4.0.1",
+    "exceljs": "4.2.0"
   }
 }
