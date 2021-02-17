@@ -1,0 +1,34 @@
+extends layout
+
+block append styles
+    link(rel='stylesheet',type='text/css', href='/stylesheets/listViewStyle.css')
+
+block content
+    div(class="wrapper")
+        header(class="header")
+            h1 HTMLListMaker
+        nav(id='linkTree')
+            a(href="/") Home
+            = otherLinks   
+        main(id="content")
+            button(onclick="copyTextarea(this)", class="bttn bttnCopy bttnCopyLV font-1p7em padding-0p5em margin-top-10px width-7em height-5em display-inline", data-active-tab="selectTextarea", id="listViewCopyBttn", data-copy-responder="copyResponse") Copy codes
+            span(id='copyResponse')  
+
+            div(class="tabs")
+                div(class="tab")
+                    input(type="radio" name="css-tabs" id="selectTab" data-tab-id="selectTextarea" checked class="tab-switch" onclick="makeActivated(this)")
+                    label(for="selectTab" class="tab-label") Select Tab
+                    div(class="tab-content")
+                        pre
+                            code
+                                textarea(readonly class='codeListBox padding-0p5em' id="selectTextarea" cols="85", rows= listLength) #{selectCodes}
+                div(class="tab")
+                    input(type="radio" name="css-tabs" id="datalistTab" data-tab-id="datalistTextarea" class="tab-switch" onclick="makeActivated(this)")
+                    label(for="datalistTab" class="tab-label") Datalist Tab
+                    div(class="tab-content")
+                        pre
+                            code
+                                textarea(readonly class='codeListBox padding-0p5em' id="datalistTextarea" cols="85", rows= listLength) #{datalistCodes}
+block append footer
+block javascripts
+    script(src='/javascripts/main.js')

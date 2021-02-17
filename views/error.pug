@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  div(class="mainMsg")
+    h1 #{error.status}  Error
+    h2 Page #{message}
+  nav(class='homelink') Go back to 
+    a(href='/' class="colour-link") home

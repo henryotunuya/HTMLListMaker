@@ -1,0 +1,112 @@
+.tabs {
+    position: absolute;
+    background: #1abc9c;
+    height: auto;
+    display: inline;
+  }
+  
+  .tabs::before,
+  .tabs::after {
+    content: "";
+    display: table;
+  }
+  
+  .tabs::after { clear: both; }
+  
+  .tab { float: left; }
+  
+  .tab-switch { display: none; }
+  
+  .tab-label {
+    position: relative;
+    display: block;
+    line-height: 2.75em;
+    height: 3em;
+    padding: 0 1.618em;
+    border-right: 0.125rem solid #16a085;
+    color: #fff;
+    cursor: pointer;
+    top: 0;
+    transition: all 0.25s;
+  }
+  
+  .tab-label:hover {
+    top: -0.25rem;
+    transition: all 0.25s;
+  }
+  
+  .tab-content {
+    background: #111;
+    color: #fff;
+    border-bottom: 0.25rem solid #bdc3c7;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    top: 2.75em;
+    left: 0;
+    opacity: 0;
+    transition: all 0.35s;
+  }
+  /* --- Make the radio inputs act as tabs. --- */
+  
+  .tab-switch:checked + .tab-label {
+    background-color: #111;
+    color: #fff;
+    border-bottom: 0;
+    border-right: 0.0625rem solid #fff;
+    transition: all 0.35s;
+    z-index: 2;
+    top: -0.0625rem;
+  }
+  
+  .tab-switch:checked + .tab-label:hover { top: -0.0625rem; }
+  
+  .tab-switch:checked + .tab-label + .tab-content {
+    opacity: 1;
+    transition: all 0.35s;
+    z-index: 3;
+  }
+
+  .codeListBox{
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    color: #faa202;
+    background-color: #111;
+    resize: none;
+    border-style: none;
+}
+.bttnCopyLV{
+    margin-left: 3em;
+    margin-right: 1em;
+}
+#content{
+      margin: auto;
+      margin-top: 3em;
+}
+#linkTree{
+    background-color: #c60deb80;
+    margin-top: 1em;
+    padding: .5em;
+    font-size: 1.5em;
+    font-family: 'Stencil';
+    color: #fff;
+}
+#linkTree a{
+    color: #fff;
+    text-decoration: none;
+}
+#footer{
+    background-color: #fff;
+    color: #000;
+    font-size: 1.5em;
+    text-align: center;
+    position: relative;
+    bottom: -10em;
+    width: 100%;
+    padding: 1.5em;
+    z-index: 4;
+    
+}
+#footer a{
+    color: #000;
+    text-decoration: none;
+}
