@@ -17,7 +17,7 @@ var filewareObject = new Fileware();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Home', copyAndDragMsg: "Upload a file to convert" });
+  res.render('index', { title: 'Home'});
 });
 
 //router.get('/clingopage', function (req, res, next) {
@@ -93,13 +93,13 @@ router.post('/', function (req, res, next) {
         });
       }
       outputCode += parentEndTag;
-      res.render('index', { title: 'Home', codes: outputCode, listLength: elementsCount, copyAndDragMsg: "Upload a file to convert" });
+      res.render('index', { title: 'Home', codes: outputCode, listLength: elementsCount});
       outputCode = "";
       elementsCount = 0;
     });
   }else{
     
-  res.render('index', { title: 'Home',codes: "No output because of invaild file format...", copyAndDragMsg: "Upload a file to convert" });
+  res.render('index', { title: 'Home',codes: "No output because of invaild file format..."});
   }
 });
 
