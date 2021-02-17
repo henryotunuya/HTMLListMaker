@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var multer = require('multer');
 var upload = multer({dest: 'uploads/'});
-require('newrelic');
+//require('newrelic');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
