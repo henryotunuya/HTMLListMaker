@@ -16,7 +16,7 @@ block append content
       div(id="theForm")
         form(method='POST' enctype="multipart/form-data" id = "uploadFileForm")
           div(id="fUBHidder") 
-            span(id="infoHeader1")= copyAndDragMsg
+            span(id="infoHeader1") Upload a file to convert
             br
             input(type='file' id="fileUploadBox" name='fileToConvert' accept=".txt,.csv" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" required)
             input(type='hidden' id="filePath_h" name ="filePath_h")
