@@ -1,8 +1,17 @@
 extends layout
 
 block content
+  div(id="wrapper")
+    header(class="header")
+      a(href='/') 
+        img(src="/images/html5logo.svg" width="50px" height="60px")
+        div(class=" pos-absolute display-inline") 
+          h1(class="mainHeaderText margin-t-p5em") List Maker
+          p(class='headSidenav') a handy tool for web designer
   div(class="mainMsg")
-    h1 #{error.status}  Error
+    h1 #{error.status}  error
     h2 Page #{message}
-  nav(class='homelink') Go back to 
-    a(href='/' class="colour-link") home
+  nav(class='homelink') 
+    a(href='/' class="colour-link") Go back to home
+
+block append footer
