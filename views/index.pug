@@ -1,13 +1,13 @@
 extends layout
 
-block content
+block append content
   div(id="wrapper")
     header(class="header")
       a(href='/') 
         img(src="/images/html5logo.svg" width="50px" height="60px")
         div(class=" pos-absolute display-inline") 
           h1(class="mainHeaderText margin-t-p5em") List Maker
-          h5(class='headSidenav') a handy tool
+          p(class='headSidenav') a handy tool for web designer
     div(id="indexImageBox")
       p(id="indexMsg")
         = 'Convert and copy HTML list elements'
@@ -16,7 +16,7 @@ block content
       div(id="theForm")
         form(method='POST' enctype="multipart/form-data" id = "uploadFileForm")
           div(id="fUBHidder") 
-            span(id="infoHeader1") Upload a file to convert
+            span(id="infoHeader1")= copyAndDragMsg
             br
             input(type='file' id="fileUploadBox" name='fileToConvert' accept=".txt,.csv" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" required)
             input(type='hidden' id="filePath_h" name ="filePath_h")
@@ -37,8 +37,7 @@ block content
     pre
       code
         textarea( readonly class='codeBox padding-top-5em padding-bottom-5em' id="indexCodeBox" cols="85", placeholder="Your list displays here...", rows= listLength) #{codes}
-    footer(class='footer') &copy; 2021 
-      a(href="https://www.linkedin.com/in/otunuyahenryc/" class="colour-link" target="_blank") Ótunuya
+    
 block append footer
 block javascripts
   script(src='/javascripts/main.js')
