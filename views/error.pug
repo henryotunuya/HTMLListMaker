@@ -1,6 +1,6 @@
 extends layout
 
-block content
+block append content
   div(id="wrapper")
     header(class="header")
       a(href='/') 
@@ -9,7 +9,7 @@ block content
           h1(class="mainHeaderText margin-t-p5em") List Maker
           p(class='headSidenav') a handy tool for web designer
   div(class="mainMsg")
-    h1 #{error.status} error
+    h1 #{error.status} Error
     h2 Page #{message}
   nav(class='homelink') 
     a(href='/' class="colour-link") Go back to home
