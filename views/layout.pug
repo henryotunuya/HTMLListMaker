@@ -1,12 +1,15 @@
 doctype html
 html
     head
-        title #{title} - HTMLListMaker
+        title #{title}HTMLListMaker
         block styles
             link(rel='icon', type='image/png', href='/images/favicon.svg')
             link(rel='stylesheet',type='text/css', href='/stylesheets/style.css')
             
     body
         block content
-        block footer
+        block footer        
+            footer(class='footer') &copy; 
+                a(href="https://www.linkedin.com/in/otunuyahenryc/" class="colour-link" target="_blank") Ótunuya 
+                | (2021)
         block javascripts
