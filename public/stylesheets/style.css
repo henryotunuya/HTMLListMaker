@@ -237,6 +237,7 @@ box-shadow:2px 2px 25px rgb(39, 23, 2); */
 .mainMsg{
   margin: 0 auto;
   margin-top: 5em;
+  margin-bottom: 10em;
   background-color: #fff;
   width: 95%;
   font-size: 2.5em;
