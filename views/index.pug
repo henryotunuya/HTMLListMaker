@@ -1,0 +1,43 @@
+extends layout
+
+block append content
+  div(id="wrapper")
+    header(class="header")
+      a(href='/') 
+        img(src="/images/html5logo.svg" width="50px" height="60px")
+        div(class=" pos-absolute display-inline") 
+          h1(class="mainHeaderText margin-t-p5em") List Maker
+          p(class='headSidenav') a handy tool for web designer
+    div(id="indexImageBox")
+      p(id="indexMsg")
+        = 'Convert and copy HTML list elements'
+      img(src="/images/indexImage.svg", alt="image", id="indexImage", srcset="")
+    section(id="content")
+      div(id="theForm")
+        form(method='POST' enctype="multipart/form-data" id = "uploadFileForm")
+          div(id="fUBHidder") 
+            span(id="infoHeader1") Upload a file to convert
+            br
+            input(type='file' id="fileUploadBox" name='fileToConvert' accept=".txt,.csv" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" required)
+            input(type='hidden' id="filePath_h" name ="filePath_h")
+          div(class="buttonBox")
+            span(id="infoHeader2") Choose output list element
+            br
+            p
+              label(for="elementLabel1" class='radioLabel') Select element
+              input(type="radio" id="elementLabel1" value="Select element" name="elementToGenerate" checked)
+            p
+              label(for="elementLabel2" class='radioLabel') Datalist element
+              input(type="radio" id="elementLabel2" value="Datalist element" name="elementToGenerate") 
+            p
+              button(type='submit', id="submitBttn", class="bttn bttnConvert font-1p7em padding-0p5em margin-top-10px") Convert      
+            p
+              button( type='button' onclick="copyTextarea(this)" data-active-tab="indexCodeBox" class="bttn bttnCopy font-2em padding-0p5em margin-top-10px" data-copy-responder="copyResponse") Copy list
+              span(id='copyResponse' class="fade")
+    pre
+      code
+        textarea( readonly class='codeBox padding-top-5em padding-bottom-5em' id="indexCodeBox" cols="85", placeholder="Your list displays here...", rows= listLength) #{codes}
+    
+block append footer
+block javascripts
+  script(src='/javascripts/main.js')
