@@ -67,7 +67,7 @@ router.post('/', function (req, res, next) {
           });
         }
         outputCode += parentEndTag;
-        res.render('index', { title: 'Home', codes: outputCode, listLength: elementsCount });
+        res.render('index', { title: 'Home - ', codes: outputCode, listLength: elementsCount });
         outputCode = "";
         elementsCount = 0;
 
@@ -93,13 +93,13 @@ router.post('/', function (req, res, next) {
         });
       }
       outputCode += parentEndTag;
-      res.render('index', { title: 'Home', codes: outputCode, listLength: elementsCount});
+      res.render('index', { title: 'Home - ', codes: outputCode, listLength: elementsCount});
       outputCode = "";
       elementsCount = 0;
     });
   }else{
     
-  res.render('index', { title: 'Home',codes: "No output because of invaild file format..."});
+  res.render('index', { title: 'Home - ',codes: "No output because of invaild file format..."});
   }
 });
 
