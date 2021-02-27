@@ -17,7 +17,7 @@ var filewareObject = new Fileware();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Home'});
+  res.render('index', { title: 'Home - '});
 });
 
 //router.get('/clingopage', function (req, res, next) {
